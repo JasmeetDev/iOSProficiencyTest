@@ -15,6 +15,9 @@
 		E04478112383168B0004BB37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E04478102383168B0004BB37 /* Assets.xcassets */; };
 		E04478142383168B0004BB37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E04478122383168B0004BB37 /* LaunchScreen.storyboard */; };
 		E044781C238317820004BB37 /* ListingVCServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E044781B238317820004BB37 /* ListingVCServiceManager.swift */; };
+		E044781E238318260004BB37 /* ListingServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E044781D238318260004BB37 /* ListingServiceManager.swift */; };
+		E0447820238318CD0004BB37 /* ApplicationResultValidatorApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E044781F238318CD0004BB37 /* ApplicationResultValidatorApi.swift */; };
+		E0447822238319530004BB37 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0447821238319530004BB37 /* Content.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		E04478132383168B0004BB37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E04478152383168B0004BB37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E044781B238317820004BB37 /* ListingVCServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingVCServiceManager.swift; sourceTree = "<group>"; };
+		E044781D238318260004BB37 /* ListingServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingServiceManager.swift; sourceTree = "<group>"; };
+		E044781F238318CD0004BB37 /* ApplicationResultValidatorApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationResultValidatorApi.swift; sourceTree = "<group>"; };
+		E0447821238319530004BB37 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		EE2FBE870F6D68E2143B42B5 /* Pods-iOSProficiencyExercise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSProficiencyExercise.release.xcconfig"; path = "Target Support Files/Pods-iOSProficiencyExercise/Pods-iOSProficiencyExercise.release.xcconfig"; sourceTree = "<group>"; };
 		EE571E7F52804871047819EB /* Pods_iOSProficiencyExercise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSProficiencyExercise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -86,6 +92,9 @@
 				E0447809238316890004BB37 /* SceneDelegate.swift */,
 				E044780B238316890004BB37 /* ViewController.swift */,
 				E044781B238317820004BB37 /* ListingVCServiceManager.swift */,
+				E044781D238318260004BB37 /* ListingServiceManager.swift */,
+				E044781F238318CD0004BB37 /* ApplicationResultValidatorApi.swift */,
+				E0447821238319530004BB37 /* Content.swift */,
 				E044780D238316890004BB37 /* Main.storyboard */,
 				E04478102383168B0004BB37 /* Assets.xcassets */,
 				E04478122383168B0004BB37 /* LaunchScreen.storyboard */,
@@ -210,6 +219,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E044780C238316890004BB37 /* ViewController.swift in Sources */,
+				E0447820238318CD0004BB37 /* ApplicationResultValidatorApi.swift in Sources */,
+				E0447822238319530004BB37 /* Content.swift in Sources */,
+				E044781E238318260004BB37 /* ListingServiceManager.swift in Sources */,
 				E0447808238316890004BB37 /* AppDelegate.swift in Sources */,
 				E044780A238316890004BB37 /* SceneDelegate.swift in Sources */,
 				E044781C238317820004BB37 /* ListingVCServiceManager.swift in Sources */,
