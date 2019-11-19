@@ -12,6 +12,7 @@ import TDResult
 class ListingVC: AppBaseViewController {
     
     static let cellIdentifer = "ListingTableCell"
+    
     //Variable(s)
     var serviceManager = ListingVCServiceManager()
     var contentTableview = UITableView()
@@ -31,10 +32,9 @@ class ListingVC: AppBaseViewController {
     
     //MARK: - Private methods
     private func initialize() {
-        setupView()
         serviceManager.delegate = self
-        self.showActivityLoader(self.view)
-        serviceManager.getContent()
+        setupView()
+        initiateApiCall()
     }
     private func setupView() {
         self.view.addSubview(contentTableview)
@@ -55,6 +55,8 @@ class ListingVC: AppBaseViewController {
         contentTableview.delegate = self
         
         registerCell()
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Refresh", style: .plain, target: self, action: #selector(refresh))
     }
     
     // Register Tableview cell
@@ -62,7 +64,14 @@ class ListingVC: AppBaseViewController {
         contentTableview.register(ListingTableCell.self, forCellReuseIdentifier: ListingVC.cellIdentifer)
     }
     
+    @objc private func refresh() {
+        initiateApiCall()
+    }
     
+    private func initiateApiCall() {
+        self.showActivityLoader(self.view)
+        serviceManager.getContent()
+    }
 }
 
 //MARK: - ListingVCServiceManager Delegate

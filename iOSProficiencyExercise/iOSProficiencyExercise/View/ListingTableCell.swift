@@ -29,13 +29,13 @@ class ListingTableCell: UITableViewCell {
         }
     }
     let contentImageView:UIImageView = {
-        let img = UIImageView()
-        img.contentMode = .scaleAspectFill // image will never be strecthed vertially or horizontally
-        img.translatesAutoresizingMaskIntoConstraints = false // enable autolayout
-        img.layer.cornerRadius = 35
-        img.backgroundColor = .lightGray
-        img.clipsToBounds = true
-        return img
+        let contentImage = UIImageView()
+        contentImage.contentMode = .scaleAspectFill // image will never be strecthed vertially or horizontally
+        contentImage.translatesAutoresizingMaskIntoConstraints = false // enable autolayout
+        contentImage.layer.cornerRadius = 35
+        contentImage.backgroundColor = .lightGray
+        contentImage.clipsToBounds = true
+        return contentImage
     }()
     let contentTitleLabel:UILabel = {
         let label = UILabel()
@@ -90,13 +90,10 @@ class ListingTableCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
     }
     
 }
