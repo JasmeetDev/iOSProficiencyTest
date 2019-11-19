@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0034C12F3EB35E0627DCC119 /* Pods_iOSProficiencyExercise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE571E7F52804871047819EB /* Pods_iOSProficiencyExercise.framework */; };
+		E02BD5AD2384753800567CC1 /* NetworkReachabiltyNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02BD5AC2384753800567CC1 /* NetworkReachabiltyNotifier.swift */; };
+		E02BD5AF238475A400567CC1 /* AppServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02BD5AE238475A400567CC1 /* AppServiceManager.swift */; };
+		E02BD5B12384765F00567CC1 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02BD5B02384765F00567CC1 /* Toast.swift */; };
 		E0447808238316890004BB37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0447807238316890004BB37 /* AppDelegate.swift */; };
 		E044780A238316890004BB37 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0447809238316890004BB37 /* SceneDelegate.swift */; };
 		E044780C238316890004BB37 /* ListingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E044780B238316890004BB37 /* ListingVC.swift */; };
@@ -24,6 +27,9 @@
 
 /* Begin PBXFileReference section */
 		B966DCA935D1DCF2F5E1503F /* Pods-iOSProficiencyExercise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSProficiencyExercise.debug.xcconfig"; path = "Target Support Files/Pods-iOSProficiencyExercise/Pods-iOSProficiencyExercise.debug.xcconfig"; sourceTree = "<group>"; };
+		E02BD5AC2384753800567CC1 /* NetworkReachabiltyNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkReachabiltyNotifier.swift; sourceTree = "<group>"; };
+		E02BD5AE238475A400567CC1 /* AppServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServiceManager.swift; sourceTree = "<group>"; };
+		E02BD5B02384765F00567CC1 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		E0447804238316890004BB37 /* iOSProficiencyExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSProficiencyExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0447807238316890004BB37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0447809238316890004BB37 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,8 +149,11 @@
 		E044782B238472340004BB37 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				E02BD5B02384765F00567CC1 /* Toast.swift */,
 				E044781F238318CD0004BB37 /* ApplicationResultValidatorApi.swift */,
 				E044782323831E410004BB37 /* AppBaseViewController.swift */,
+				E02BD5AC2384753800567CC1 /* NetworkReachabiltyNotifier.swift */,
+				E02BD5AE238475A400567CC1 /* AppServiceManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -264,6 +273,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E02BD5AF238475A400567CC1 /* AppServiceManager.swift in Sources */,
+				E02BD5B12384765F00567CC1 /* Toast.swift in Sources */,
+				E02BD5AD2384753800567CC1 /* NetworkReachabiltyNotifier.swift in Sources */,
 				E044780C238316890004BB37 /* ListingVC.swift in Sources */,
 				E044782423831E410004BB37 /* AppBaseViewController.swift in Sources */,
 				E0447820238318CD0004BB37 /* ApplicationResultValidatorApi.swift in Sources */,
@@ -419,6 +431,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iOSProficiencyExercise/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -437,6 +450,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iOSProficiencyExercise/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
