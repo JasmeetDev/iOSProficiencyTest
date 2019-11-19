@@ -10,7 +10,7 @@
 		0034C12F3EB35E0627DCC119 /* Pods_iOSProficiencyExercise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE571E7F52804871047819EB /* Pods_iOSProficiencyExercise.framework */; };
 		E0447808238316890004BB37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0447807238316890004BB37 /* AppDelegate.swift */; };
 		E044780A238316890004BB37 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0447809238316890004BB37 /* SceneDelegate.swift */; };
-		E044780C238316890004BB37 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E044780B238316890004BB37 /* ViewController.swift */; };
+		E044780C238316890004BB37 /* ListingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E044780B238316890004BB37 /* ListingVC.swift */; };
 		E044780F2383168A0004BB37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E044780D238316890004BB37 /* Main.storyboard */; };
 		E04478112383168B0004BB37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E04478102383168B0004BB37 /* Assets.xcassets */; };
 		E04478142383168B0004BB37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E04478122383168B0004BB37 /* LaunchScreen.storyboard */; };
@@ -18,6 +18,8 @@
 		E044781E238318260004BB37 /* ListingServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E044781D238318260004BB37 /* ListingServiceManager.swift */; };
 		E0447820238318CD0004BB37 /* ApplicationResultValidatorApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = E044781F238318CD0004BB37 /* ApplicationResultValidatorApi.swift */; };
 		E0447822238319530004BB37 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0447821238319530004BB37 /* Content.swift */; };
+		E044782423831E410004BB37 /* AppBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E044782323831E410004BB37 /* AppBaseViewController.swift */; };
+		E04478262384555B0004BB37 /* ListingTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04478252384555B0004BB37 /* ListingTableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +27,7 @@
 		E0447804238316890004BB37 /* iOSProficiencyExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSProficiencyExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0447807238316890004BB37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0447809238316890004BB37 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E044780B238316890004BB37 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E044780B238316890004BB37 /* ListingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingVC.swift; sourceTree = "<group>"; };
 		E044780E238316890004BB37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E04478102383168B0004BB37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E04478132383168B0004BB37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -34,6 +36,8 @@
 		E044781D238318260004BB37 /* ListingServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingServiceManager.swift; sourceTree = "<group>"; };
 		E044781F238318CD0004BB37 /* ApplicationResultValidatorApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationResultValidatorApi.swift; sourceTree = "<group>"; };
 		E0447821238319530004BB37 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
+		E044782323831E410004BB37 /* AppBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBaseViewController.swift; sourceTree = "<group>"; };
+		E04478252384555B0004BB37 /* ListingTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingTableCell.swift; sourceTree = "<group>"; };
 		EE2FBE870F6D68E2143B42B5 /* Pods-iOSProficiencyExercise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSProficiencyExercise.release.xcconfig"; path = "Target Support Files/Pods-iOSProficiencyExercise/Pods-iOSProficiencyExercise.release.xcconfig"; sourceTree = "<group>"; };
 		EE571E7F52804871047819EB /* Pods_iOSProficiencyExercise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSProficiencyExercise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -90,17 +94,59 @@
 			children = (
 				E0447807238316890004BB37 /* AppDelegate.swift */,
 				E0447809238316890004BB37 /* SceneDelegate.swift */,
-				E044780B238316890004BB37 /* ViewController.swift */,
-				E044781B238317820004BB37 /* ListingVCServiceManager.swift */,
-				E044781D238318260004BB37 /* ListingServiceManager.swift */,
-				E044781F238318CD0004BB37 /* ApplicationResultValidatorApi.swift */,
-				E0447821238319530004BB37 /* Content.swift */,
+				E0447828238471FF0004BB37 /* Model */,
+				E0447827238471F00004BB37 /* View */,
+				E0447829238472150004BB37 /* ViewModel */,
+				E044782A238472250004BB37 /* ServiceManager */,
+				E044782B238472340004BB37 /* Utilities */,
 				E044780D238316890004BB37 /* Main.storyboard */,
 				E04478102383168B0004BB37 /* Assets.xcassets */,
 				E04478122383168B0004BB37 /* LaunchScreen.storyboard */,
 				E04478152383168B0004BB37 /* Info.plist */,
 			);
 			path = iOSProficiencyExercise;
+			sourceTree = "<group>";
+		};
+		E0447827238471F00004BB37 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E04478252384555B0004BB37 /* ListingTableCell.swift */,
+				E044780B238316890004BB37 /* ListingVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E0447828238471FF0004BB37 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E0447821238319530004BB37 /* Content.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E0447829238472150004BB37 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E044781B238317820004BB37 /* ListingVCServiceManager.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E044782A238472250004BB37 /* ServiceManager */ = {
+			isa = PBXGroup;
+			children = (
+				E044781D238318260004BB37 /* ListingServiceManager.swift */,
+			);
+			path = ServiceManager;
+			sourceTree = "<group>";
+		};
+		E044782B238472340004BB37 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E044781F238318CD0004BB37 /* ApplicationResultValidatorApi.swift */,
+				E044782323831E410004BB37 /* AppBaseViewController.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,11 +264,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E044780C238316890004BB37 /* ViewController.swift in Sources */,
+				E044780C238316890004BB37 /* ListingVC.swift in Sources */,
+				E044782423831E410004BB37 /* AppBaseViewController.swift in Sources */,
 				E0447820238318CD0004BB37 /* ApplicationResultValidatorApi.swift in Sources */,
 				E0447822238319530004BB37 /* Content.swift in Sources */,
 				E044781E238318260004BB37 /* ListingServiceManager.swift in Sources */,
 				E0447808238316890004BB37 /* AppDelegate.swift in Sources */,
+				E04478262384555B0004BB37 /* ListingTableCell.swift in Sources */,
 				E044780A238316890004BB37 /* SceneDelegate.swift in Sources */,
 				E044781C238317820004BB37 /* ListingVCServiceManager.swift in Sources */,
 			);

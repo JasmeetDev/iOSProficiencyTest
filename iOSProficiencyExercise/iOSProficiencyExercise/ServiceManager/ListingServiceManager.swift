@@ -37,7 +37,7 @@ class ListingServiceManager: TDWebserviceAlamofire{
     
     
     func resultType() -> TDResultType {
-        return .JSON
+        return .Data
     }
     
     
@@ -49,10 +49,20 @@ class ListingServiceManager: TDWebserviceAlamofire{
         apiCall {(result) in
             switch result {
             case .Success(let resultData):
-                let jsonData = resultData.resultData as! TDJson
-                if let result = jsonData.jsonData as? [String:AnyObject]{
-                    let content = Content.mapJsonDictionaryData(jsonDictionary: result)!
-                    completionHandler(TDResult.init(value:content))
+                let jsonData = resultData.resultData as! Data
+                let jsonString = String(decoding: jsonData, as: UTF8.self)
+                let data = jsonString.data(using: .utf8)!
+                do {
+                    let jsonObj = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as AnyObject
+                       if let result = jsonObj as? [String:AnyObject]{
+                                        let content = Content.mapJsonDictionaryData(jsonDictionary: result)!
+                                        completionHandler(TDResult.init(value:content))
+                        }
+                }
+                catch {
+                    print(error.localizedDescription)
+                    completionHandler(TDResult.Error(TDError.init(TDWebServiceError.apiError)))
+
                 }
             case .Error(let error):
                 completionHandler(TDResult.Error(error))

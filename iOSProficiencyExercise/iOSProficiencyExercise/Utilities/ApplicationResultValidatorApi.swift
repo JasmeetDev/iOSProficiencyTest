@@ -20,22 +20,19 @@ enum ApiError: Error{
 
 struct ApplicationResultValidatorApi: TDResultValidatorApi{
     func validateResponse(_ result: TDWSResponse) -> TDResult<TDWSResponse, TDError> {
-        guard let jsonData = result.resultData as? TDJson else {
+        guard let jsonData = result.resultData as? Data else {
             return TDResult.Error(TDError.init(ApiError.invalidResponseType, code: 400, description: "Invalid Response from Server"))
         }
-        guard let response = jsonData.jsonData as? [String:Any] else {
-            return TDResult.Error(TDError.init(ApiError.invalidResponseType, code: 400, description: "Invalid Response from Server"))
+        do {
+            let jsonString = String(decoding: jsonData, as: UTF8.self)
+            let data = jsonString.data(using: .utf8)!
+             let jsonObj = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as AnyObject
+            var json = TDJson()
+            json.jsonData = jsonObj
         }
-        if let httpStatusCode =  response["statusCode"] as? Int  {
-        if httpStatusCode == 402  {
-            NotificationCenter.default.post(name: Notification.Name(rawValue:"sessionExpired"), object: nil, userInfo: ["showAlert":true,"message" : (response["message"] as? String) as Any])
-             return TDResult.Error(TDError.init(ApiError.badAccessToken, code: 402, description: response["message"] as? String))
-        }
-    }
-        
-      
-        guard response["statusCode"] as? Int == 200 else {
-            return TDResult.Error(self.getErrorResponse(response: response))
+        catch {
+            print(error.localizedDescription)
+                return TDResult.Error(TDError.init(ApiError.invalidResponseType, code: 400, description: "Invalid Response from Server"))
         }
         return TDResult.init(value: result)
     }

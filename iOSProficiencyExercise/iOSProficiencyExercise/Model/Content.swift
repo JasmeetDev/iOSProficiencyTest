@@ -43,6 +43,7 @@ class Row: Mappable {
     func mapping(map: Map) {
         title               <- map["title"]
         description         <- map["description"]
+        imageHref <- map["imageHref"]
     }
     
     class func mapJsonDictionaryData(jsonDictionary:[String:AnyObject])->Row? {
